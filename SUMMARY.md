@@ -1,6 +1,6 @@
 # Summary
 
-* [关于金山云深度学习平台](README.md)
+* [关于KDL](README.md)
 * [1.模型训练](chapter1.md)
   * [1.1.本地编写代码](chapter1/dsa.md)
   * [1.2. 打包代码](chapter1/112-da-bao-dai-ma.md)
