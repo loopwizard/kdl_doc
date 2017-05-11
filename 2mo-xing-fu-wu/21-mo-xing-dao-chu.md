@@ -1,6 +1,6 @@
 # 线性回归模型导出示例
 
-作业训练时，将模型导出的代码如下
+作业训练时，模型导出的代码如下
 
 ```py
 # 创建builder
@@ -36,14 +36,4 @@ builder.add_meta_graph_and_variables(
 
 builder.save()
 ```
-
-
-
-
-
-
-
-
-
-
 
