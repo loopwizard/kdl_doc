@@ -8,4 +8,7 @@
   * [1.4.提交作业](chapter1/14ti-jiao-zuo-ye.md)
   * [1.5.查看作业](chapter1/15cha-kan-zuo-ye.md)
 * [2.模型服务](2mo-xing-fu-wu.md)
+  * [2.1 模型导出](2mo-xing-fu-wu/21-mo-xing-dao-chu.md)
+  * 2.2 启动server
+  * [2.3 编写客户端代码](2mo-xing-fu-wu/23-bian-xie-ke-hu-duan-dai-ma.md)
 
