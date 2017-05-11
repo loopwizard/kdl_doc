@@ -1,6 +1,20 @@
 # 线性回归模型导出示例
 
-作业训练时，模型导出的代码如下
+使用TensorFlow的SavedModelBuilder实例进行模型的保存。
+
+模型保存的几个步骤：
+
+1. 创建SavedModelBuilder对象builder，指定模型导出路径
+
+2. 调用build\_\_signature\_\_def函数创建signature map，指定inputs、outputs、method名称。包括三种类型的inputs、outputs和method：CLASSIFY、REGRESS、PREDICT。
+
+3. 调用add_\_meta\_\_graph_\_and\_\_variables添加图和变量的metadata。
+
+4. 调用save方法保存模型
+
+
+
+线性回归模型导出代码如下：
 
 ```py
 # 创建builder
@@ -37,16 +51,5 @@ builder.add_meta_graph_and_variables(
 builder.save()
 ```
 
-使用TensorFlow的SavedModelBuilder实例进行模型的保存。
-
-模型保存的几个步骤：
-
-1. 创建SavedModelBuilder对象builder，指定模型导出路径
-
-2. 调用build\_\_signature\_\_def函数创建signature map，指定inputs、outputs、method名称。包括三种类型的inputs、outputs和method：CLASSIFY、REGRESS、PREDICT。 
-
-3. 调用add_\_meta\_\_graph_\_and\_\_variables添加图和变量的metadata。
-
-4. 调用save方法保存模型
 
 
