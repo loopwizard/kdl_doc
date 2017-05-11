@@ -1,4 +1,4 @@
-# 线性回归模型导出示例
+# 线性回归模型导出
 
 使用TensorFlow的SavedModelBuilder实例进行模型的保存。
 
@@ -11,7 +11,6 @@
 3. 调用add_\_meta\_\_graph_\_and\_\_variables添加图和变量的metadata。
 
 4. 调用save方法保存模型
-
 
 
 线性回归模型导出代码如下：
@@ -50,6 +49,4 @@ builder.add_meta_graph_and_variables(
 
 builder.save()
 ```
-
-
 
