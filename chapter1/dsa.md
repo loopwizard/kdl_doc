@@ -18,7 +18,7 @@
      vim trainer/task.py
 ```
 
-###  引入依赖
+### 引入依赖
 
 ```py
 #!/usr/bin/env python
@@ -97,7 +97,7 @@ python -m trainer.task
 
 ### Checkpoint
 
-        长时间运行的训练任务需要有失败处理策略，可以使用Tensorflow提供的checkpoint功能在合适的时机对作业进行checkpoint,以确保重新启动作业时可以继续运行而不是重新运行，KDL支持用户将checkpoint数据写入ks3文件系统：
+    长时间运行的训练任务需要有失败处理策略，可以使用Tensorflow提供的checkpoint功能在合适的时机对作业进行checkpoint,以确保重新启动作业时可以继续运行而不是重新运行，KDL支持用户将checkpoint数据写入ks3文件系统：
 
 ```py
 saver = tf.train.Saver()
@@ -109,5 +109,7 @@ with tf.Session() as sess:
 
 ### Export Model
 
-        训练作业运行完成后我们需要将模型数据导出至ks3文件系统，并启动模型服务对外提供模型预测。具体请参考“模型服务”具体章节。
+训练作业运行完成后我们需要将模型数据导出至ks3文件系统，并启动模型服务对外提供模型预测。具体请参考“模型服务”具体章节。
+
+
 
