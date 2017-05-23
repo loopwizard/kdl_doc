@@ -113,7 +113,11 @@ with tf.Session() as sess:
 
 训练作业运行完成后我们需要将模型数据导出至ks3文件系统，并启动模型服务对外提供模型预测。具体请参考“模型服务”具体章节。
 
-## 
+## linear及mnist示例完整代码
+
+[https://ks3-cn-beijing.ksyun.com/ai-train-demo/tf-1.0/linear/trainer-1.0.tar.gz](https://ks3-cn-beijing.ksyun.com/ai-train-demo/tf-1.0/linear/trainer-1.0.tar.gz "linear")
+
+[https://ks3-cn-beijing.ksyun.com/ai-train-demo/tf-1.0/mnist/mnist-1.0.tar.gz](https://ks3-cn-beijing.ksyun.com/ai-train-demo/tf-1.0/mnist/mnist-1.0.tar.gz "mnist")
 
 
 
