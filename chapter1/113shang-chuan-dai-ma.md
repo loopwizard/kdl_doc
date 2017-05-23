@@ -20,6 +20,10 @@ KDL支持训练作业使用KS3上的训练、测试数据。**支持加密数据
 
 ### 使用KS3 API上传数据
 
+#### 安装KS3 python sdk
+
+请参考KS3 Python SDK文档[https://docs.ksyun.com/read/latest/65/\_book/sdk/python.html](https://docs.ksyun.com/read/latest/65/_book/sdk/python.html)
+
 #### 上传非加密数据
 
 
