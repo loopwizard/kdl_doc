@@ -145,7 +145,36 @@ def make_header():
     }   
     return headers
 
-
+def test_post_mnist_data_with_custom_encryption():
+    try:
+        obj_prefix = "tf-1.0/mnist/custom_encryption_input_data/"
+        local_file_prefix = "./input_data/"
+        connection = Ks3Connection(ak,sk,host=host)
+        bucket = connection.get_bucket(bucket_name)
+        for filename in filenames:
+            key = bucket.new_key(obj_prefix+filename)
+            response = key.set_contents_from_filename(local_file_prefix+filename,
+                        headers=make_header())
+            print response.status,response.msg,response.read()
+    except Exception as e:
+        print e
+def test_get_mnist_data_with_custom_encryption():
+    try:
+        local_save_path = "./custom_encryption_download/"
+        if not os.path.exists(local_save_path):
+            os.makedirs(local_save_path)
+        remote_base_path = "tf-1.0/mnist/custom_encryption_input_data/"
+        connection = Ks3Connection(ak,sk,host=host)
+        bucket = connection.get_bucket(bucket_name)
+        headers = make_header()
+        for filename in filenames:
+            key = bucket.get_key(remote_base_path+filename,headers=headers)
+            key.get_contents_to_filename(local_save_path+filename,headers=headers)
+    except Exception as e:
+        print(e)
+if __name__ == '__main__':
+    test_post_mnist_data_with_custom_encryption()
+    test_get_mnist_data_with_custom_encryption()
 ```
 
 
