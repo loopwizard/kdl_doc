@@ -121,7 +121,30 @@ vim upload_mnist_data_with_custom_encryption.py
 
 代码如下：
 
-```
+```py
+from ks3.connection import Connection as Ks3Connection
+import base64
+import hashlib
+import os
+
+ak = "wmVpw6/EnNtRDqAv3R8W"
+sk = "Kq+Oe9OvF5vOXnjIUwtgLU7m/oJ5DOz39rf6a/3b" 
+host = "ks3-cn-beijing.ksyun.com"
+bucket_name = "wcx-ai-demo"
+filenames = ["t10k-images-idx3-ubyte.gz","t10k-labels-idx1-ubyte.gz",
+            "train-images-idx3-ubyte.gz","train-labels-idx1-ubyte.gz"]
+raw_key = "123456789012345678901234"
+
+def make_header():
+    base64_key = base64.b64encode(raw_key)
+    md5_base64_key = base64.b64encode(hashlib.md5(raw_key).digest())
+    headers = { 
+        "x-kss-server-side-encryption-customer-algorithm":"AES256",
+        "x-kss-server-side-encryption-customer-key":base64_key,
+        "x-kss-server-side-encryption-customer-key-MD5":md5_base64_key
+    }   
+    return headers
+
 
 ```
 
