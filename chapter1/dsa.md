@@ -97,9 +97,7 @@ python -m trainer.task
 
 ### Checkpoint
 
-```
 长时间运行的训练任务需要有失败处理策略，可以使用Tensorflow提供的checkpoint功能在合适的时机对作业进行checkpoint,以确保重新启动作业时可以继续运行而不是重新运行，KDL支持用户将checkpoint数据写入ks3文件系统：
-```
 
 ```py
 saver = tf.train.Saver()
@@ -118,6 +116,4 @@ with tf.Session() as sess:
 [https://ks3-cn-beijing.ksyun.com/ai-train-demo/tf-1.0/linear/trainer-1.0.tar.gz](https://ks3-cn-beijing.ksyun.com/ai-train-demo/tf-1.0/linear/trainer-1.0.tar.gz "linear")
 
 [https://ks3-cn-beijing.ksyun.com/ai-train-demo/tf-1.0/mnist/mnist-1.0.tar.gz](https://ks3-cn-beijing.ksyun.com/ai-train-demo/tf-1.0/mnist/mnist-1.0.tar.gz "mnist")
-
-
 
