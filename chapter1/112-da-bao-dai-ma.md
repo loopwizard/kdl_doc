@@ -19,21 +19,17 @@ dist目录中生成我们的代码包
 
 ```
 ├── dist
-│   └── trainer-1.0.tar.gz
+│   └── trainer-1.0.tar.gz
 ├── setup.py
 ├── trainer
-│   ├── __init__.py
-│   └── task.py
+│   ├── __init__.py
+│   └── task.py
 └── trainer.egg-info
     ├── dependency_links.txt
     ├── PKG-INFO
     ├── SOURCES.txt
     └── top_level.txt
 ```
-
-
-
-
 
 
 
