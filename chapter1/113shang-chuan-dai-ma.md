@@ -26,7 +26,43 @@ KDL支持训练作业使用KS3上的训练、测试数据。**支持加密数据
 
 #### 上传非加密数据
 
+```bash
+[]# ls input_data/
+t10k-images-idx3-ubyte.gz  t10k-labels-idx1-ubyte.gz  train-images-idx3-ubyte.gz  train-labels-idx1-ubyte.gz
+```
 
+```
+vim upload_mnist_data.py
+```
+
+```py
+from ks3.connection import Connection as Ks3Connection
+import base64
+
+ak = "..."
+sk = "..." 
+host = "ks3-cn-beijing.ksyun.com"
+bucket_name = "..."
+
+def test_put_mnist_data():
+    filenames = ["t10k-images-idx3-ubyte.gz","t10k-labels-idx1-ubyte.gz",
+                 "train-images-idx3-ubyte.gz","train-labels-idx1-ubyte.gz"]
+    obj_prefix = "tf-1.0/mnist/input_data/"
+    local_file_prefix = "./input_data/"
+    try:
+        connection = Ks3Connection(ak,sk,host=host)
+        bucket = connection.get_bucket(bucket_name)
+        for filename in filenames:
+            key = bucket.new_key(obj_prefix+filename) 
+            response = key.set_contents_from_filename(local_file_prefix+filename)
+            print response.status,response.msg,response.read() 
+    except Exception as e:
+        print(e)
+if __name__ == '__main__':
+    test_put_mnist_data()
+```
+
+#### 
 
 #### 上传加密数据
 
