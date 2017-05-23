@@ -2,7 +2,7 @@
 
 开始编写训练任务代码，代码规范与社区版Tensorflow一致并符合Python模块标准，不依赖额外的KDL API。
 
-第一个示例liner
+我们创建第一个示例linear
 
 ## 创建模块
 
