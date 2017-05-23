@@ -62,9 +62,56 @@ if __name__ == '__main__':
     test_put_mnist_data()
 ```
 
-#### 
+上传
+
+```
+python upload_minist_data.py
+```
 
 #### 上传加密数据
+
+ks3对上传加密数据提供秘钥托管、自定义秘钥两种方式，需要在上传时提供相应header。
+
+##### 秘钥托管
+
+```
+vim upload_mnist_data_with_hosting_encryption.py
+```
+
+代码如下：
+
+```py
+from ks3.connection import Connection as Ks3Connection
+import base64
+
+ak = "..."
+sk = "..." 
+host = "ks3-cn-beijing.ksyun.com"
+bucket_name = "..."
+filenames = ["t10k-images-idx3-ubyte.gz","t10k-labels-idx1-ubyte.gz",
+    "train-images-idx3-ubyte.gz","train-labels-idx1-ubyte.gz"]
+obj_prefix = "tf-1.0/mnist/hosting_encryption_input_data/"
+local_file_prefix = "./input_data/"
+
+headers = {"x-kss-server-side-encryption":"AES256"}
+
+def test_post_with_hosting_encryption():
+    try:
+        connection = Ks3Connection(ak,sk,host=host)
+        bucket = connection.get_bucket(bucket_name)
+        for filename in filenames:
+            key = bucket.new_key(obj_prefix+filename) 
+            response = key.set_contents_from_filename(local_file_prefix+filename,
+                        headers=headers)
+            print response.status,response.msg,response.read() 
+    except Exception as e:
+        print e 
+
+def test_get_with_header():
+
+if __name__ == '__main__':
+    test_post_with_hosting_encryption()
+```
 
 
 
