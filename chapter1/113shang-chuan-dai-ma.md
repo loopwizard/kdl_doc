@@ -113,5 +113,11 @@ if __name__ == '__main__':
     test_post_with_hosting_encryption()
 ```
 
+##### 自定义秘钥
 
+```
+vim upload_mnist_data_with_custom_encryption.py
+```
+
+代
 
