@@ -160,3 +160,9 @@ cloudml jobs bind_ts 1495611270639 linear-tensorboard
 
 将tensorboard绑定至训练任务
 
+# 六. 模型服务相关命令
+
+# 七. tensorboard相关命令
+
+
+
