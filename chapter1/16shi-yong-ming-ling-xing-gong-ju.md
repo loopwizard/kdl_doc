@@ -154,11 +154,11 @@ cloudml jobs hp 1495594907257-hp-2
 
 ## 8. 为训练任务绑定tensorboard
 
+将tensorboard绑定至训练任务
+
 ```
 cloudml jobs bind_ts 1495611270639 linear-tensorboard
 ```
-
-将tensorboard绑定至训练任务
 
 # 六. 模型服务相关命令
 
