@@ -75,8 +75,10 @@ cloudml jobs list -cp 1 -pg 5 -st error
 
 ## 提交训练任务
 
-```
+### 使用参数提交
 
+```
+ cloudml jobs submit -n cli_linear_test -m trainer.task -u ks3://ai-train-demo/tf-1.0/linear/trainer-1.0.tar.gz -fi cpu.basic
 ```
 
 
