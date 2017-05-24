@@ -66,7 +66,7 @@ Successfully initialize config file in path: /home/user/.config/ksc/config
 ```
 cloudml jobs list
 #分页及按状态过滤
-
+cloudml jobs list -cp 1 -pg 20 -st error
 ```
 
 ## 提交训练任务
