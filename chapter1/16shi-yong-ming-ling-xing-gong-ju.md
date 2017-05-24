@@ -114,9 +114,7 @@ cloudml jobs submit -f cli_linear_demo.json
 | -ct | --create\_tensorboard | 是否为当前任务创建tensorboard | string | no | true或false |
 | -tn | --tensorboard\_name | tensorboard名称 | string | no | linear\_tensorboard |
 | -ld | --logdir | tensorboard目录 | string | no | ks3://ai-train-demo/tf-1.0/linear/tensorboard/ |
-| -ek | --ks3\_encryption\_key | ks3上的加密训练数据的加密秘钥,必须是长度为16/24/32的字符串 | string | no | 12345678901234562.  |
-
-
+| -ek | --ks3\_encryption\_key | ks3上的加密训练数据的加密秘钥,必须是长度为16/24/32的字符串 | string | no | 12345678901234562. |
 
 ## 3. 查看训练任务详细信息
 
@@ -126,7 +124,7 @@ cloudml jobs submit -f cli_linear_demo.json
 
 **需要注意的是需要传jobname的值，而不是raw\_job\_name的值。**
 
-## 4.  删除训练任务
+## 4.  删除训练任务
 
 ```
 cloudml jobs describe 1495610454570
@@ -136,11 +134,29 @@ cloudml jobs describe 1495610454570
 
 ## 5. 查看训练任务日志
 
+```
+cloudml jobs logs 1495611270639
+```
+
 ## 6. 查看训练任务资源利用情况
+
+```
+cloudml jobs metrics 1495611270639
+```
 
 ### 7. 查看超参数调优任务结果对比
 
+```
+cloudml jobs hp 1495594907257-hp-2
+```
+
+非超参数调优任务不能使用该命令
+
 ## 8. 为训练任务绑定tensorboard
 
+```
+cloudml jobs bind_ts 1495611270639 linear-tensorboard
+```
 
+将tensorboard绑定至训练任务
 
