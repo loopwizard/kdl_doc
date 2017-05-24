@@ -106,6 +106,7 @@ cloudml jobs submit -f cli_linear_demo.json
 | -n | --raw\_job\_name | 任务名称 | string | yes | linear\_test |
 | -m | --module\_name | 任务代码的python模块名称 | string | yes | trainer.task |
 | -u | --trainer\_uri | 任务代码包ks3路径 | string | yes | ks3://ai-train-demo/tf-1.0/linear/trainer-1.0.tar.gz |
+| -fi | --flavor\_id | 资源套餐id | string | yes | cpu.basic |
 |  |  |  |  |  |  |
 
 
