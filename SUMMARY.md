@@ -14,5 +14,5 @@
   * [2.3 编写客户端代码](2mo-xing-fu-wu/23-bian-xie-ke-hu-duan-dai-ma.md)
 * [3.Tensorboard](3tensorboard.md)
   * [3.1 创建Tensorboard](3tensorboard/31-chuang-jian-tensorboard.md)
-  * 3.2 使用Tensorboard
+  * [3.2 使用Tensorboard](3tensorboard/32-shi-yong-tensorboard.md)
 
