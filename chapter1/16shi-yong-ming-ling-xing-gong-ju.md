@@ -1,4 +1,4 @@
-#  一. 简介
+# 一. 简介
 
 KDL提供的命令行工具，可以满足用户在命令行进行训练任务、模型服务、tensorboard的创建及查询功能等功能。
 
@@ -41,8 +41,6 @@ Save settings? [y/N]: y
 Successfully initialize config file in path: /home/user/.config/ksc/config
 ```
 
-
-
 # 四. cloudml命令
 
 可以通过cloudml -h查看支持的命令：
@@ -57,7 +55,7 @@ Successfully initialize config file in path: /home/user/.config/ksc/config
 | tensorboard | 创建、查询tensorboard | cloudml tensorboard list |
 | quota | 查询当前用户的quota信息 | cloudml quota list |
 
-#  五. 训练任务相关命令
+# 五. 训练任务相关命令
 
 训练任务相关命令可以通过cloudml jobs -h查看。
 
@@ -102,8 +100,6 @@ cloudml jobs submit -f cli_linear_demo.json
 ```
 
 ### 3\). 提交训练任务命令参数说明
-
-
 
 
 
