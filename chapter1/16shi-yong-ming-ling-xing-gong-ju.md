@@ -111,10 +111,12 @@ cloudml jobs submit -f cli_linear_demo.json
 | -a | --job\_args | 任务参数 | string | no | --max\_epochs 100 --optimizer sgd |
 | -pc | --prepare\_command | 训练准备命令，训练任务运行前执行 | string | no | pip isntall six && apt-get install libssl-dev |
 | -fc | --finish\_command | 训练清理命令，训练任务运行后执行 | string | no | rm run.log |
-| -ct | --create\_tensorboard | 是否为当前任务创建tensorboard | string  | no | true或false |
+| -ct | --create\_tensorboard | 是否为当前任务创建tensorboard | string | no | true或false |
 | -tn | --tensorboard\_name | tensorboard名称 | string | no | linear\_tensorboard |
 | -ld | --logdir | tensorboard目录 | string | no | ks3://ai-train-demo/tf-1.0/linear/tensorboard/ |
 | -ek | --ks3\_encryption\_key | ks3上的加密训练数据的加密秘钥,必须是长度为16/24/32的字符串 | string | no | 1234567890123456 |
+
+2. 查看训练任务详细信息
 
 
 
