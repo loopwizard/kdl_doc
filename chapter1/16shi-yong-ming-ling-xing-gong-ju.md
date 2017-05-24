@@ -11,9 +11,10 @@ tar -zxvf cloud_ml_sdk.tar.gz
 
 ```bash
 cd cloud_ml_common
+sudo pip install -r requirements.txt
 sudo python ./setup.py install
- 
-cd ../cloud_ml_sdk/
+
+cd ../cloud_ml_sdk
 sudo python ./setup.py install
 ```
 
