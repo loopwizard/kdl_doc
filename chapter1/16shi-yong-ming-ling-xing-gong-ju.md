@@ -1,3 +1,5 @@
+* ##### [安装命令行工具](#安装命令行工具)
+
 # 安装命令行工具
 
 ```bash
@@ -17,6 +19,22 @@ sudo python setup.py install
 cd ../cloud_ml_sdk
 sudo pip install -r requirements.txt
 sudo python setup.py install
+```
+
+# 初始化环境
+
+用户需要获取金山云的access key和secret key，以及kdl的enpoint:
+
+```
+$ cloudml init
+Please input access key: your_access_key
+Please input secret key (will not be echoed): 
+Please input cloudml endpoint[default: https://ai-beta:8000]: http://ai.beta.ksyun.com
+
+Test access with supplied credentials? [y/N]: N
+
+Save settings? [y/N]: y
+Successfully initialize config file in path: /home/user/.config/ksc/config
 ```
 
 
