@@ -41,7 +41,17 @@ Save settings? [y/N]: y
 Successfully initialize config file in path: /home/user/.config/ksc/config
 ```
 
-# 
+# 命令说明
+
+## cloudml命令
+
+可以通过cloudml -h查看支持的命令：
+
+| 命令名 | 描述 |
+| :--- | :--- |
+| init | 初始化环境变量 |
+| org\_id | 查询当前用户的组织结构id |
+| flavors | 查询kdl |
 
 # 提交训练任务
 
