@@ -12,4 +12,7 @@
   * [2.1 模型导出](2mo-xing-fu-wu/21-mo-xing-dao-chu.md)
   * [2.2 启动server](22-启动server.md)
   * [2.3 编写客户端代码](2mo-xing-fu-wu/23-bian-xie-ke-hu-duan-dai-ma.md)
+* [3.Tensorboard](3tensorboard.md)
+  * [3.1 创建Tensorboard](3tensorboard/31-chuang-jian-tensorboard.md)
+  * 3.2 使用Tensorboard
 
