@@ -101,5 +101,12 @@ cloudml jobs submit -f cli_linear_demo.json
 
 ### 3\). 提交训练任务命令参数说明
 
+| 参数名 | 参数全名 | 描述 | 数据类型 | 是否必填 | 举例 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| -n | --raw\_job\_name | 任务名称 | string | yes | linear\_test |
+| -m | --module\_name | 任务代码的python模块名称 | string | yes | trainer.task |
+| -u | --trainer\_uri | 任务代码包ks3路径 | string | yes | ks3://ai-train-demo/tf-1.0/linear/trainer-1.0.tar.gz |
+|  |  |  |  |  |  |
+
 
 
