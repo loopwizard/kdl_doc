@@ -47,13 +47,35 @@ Successfully initialize config file in path: /home/user/.config/ksc/config
 
 可以通过cloudml -h查看支持的命令：
 
-| 命令名 | 描述 |
-| :--- | :--- |
-| init | 初始化环境变量 |
-| org\_id | 查询当前用户的组织结构id |
-| flavors | 查询kdl |
+| 命令名 | 描述 | 示例 |
+| :--- | :--- | :--- |
+| init | 初始化环境变量 | cloudml init |
+| org\_id | 查询当前用户的组织结构id | cloudml org\_id |
+| flavors | 查询kdl支持的资源套餐 | cloudml flavors list |
+| jobs | 创建、查询模型训练任务 | cloudml jobs list |
+| models | 创建、查询模型服务 | cloudml models list |
+| tensorboard | 创建、查询tensorboard | cloudml tensorboard list |
+| quota | 查询当前用户的quota信息 | cloudml quota list |
 
-# 提交训练任务
+# 训练任务
+
+训练任务相关命令可以通过cloudml jobs -h查看。
+
+## 训练任务列表
+
+```
+cloudml jobs list
+#分页
+
+```
+
+
+
+## 提交训练任务
+
+```
+
+```
 
 
 
