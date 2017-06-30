@@ -127,10 +127,10 @@ import base64
 import hashlib
 import os
 
-ak = "wmVpw6/EnNtRDqAv3R8W"
-sk = "Kq+Oe9OvF5vOXnjIUwtgLU7m/oJ5DOz39rf6a/3b" 
+ak = "your ak"
+sk = "your sk" 
 host = "ks3-cn-beijing.ksyun.com"
-bucket_name = "wcx-ai-demo"
+bucket_name = "your bucket"
 filenames = ["t10k-images-idx3-ubyte.gz","t10k-labels-idx1-ubyte.gz",
             "train-images-idx3-ubyte.gz","train-labels-idx1-ubyte.gz"]
 raw_key = "123456789012345678901234"
